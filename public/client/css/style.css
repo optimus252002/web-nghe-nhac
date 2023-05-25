@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+}
+
+.wrapper .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 16.6666667%;
+    background: #020202;
+}
+
+.sidebar .nav-sidebar a:hover {
+    color: #ffff;
+}
+
+.sidebar .nav-sidebar {
+    color: #ffff;
+    list-style: none;
+    margin-top: 20%;
+    font-size: 20px;
+    padding-left: 10%;
+}
+
+.sidebar .nav-sidebar li {
+    padding-top: 15px;
+}
+
+.sidebar .nav-sidebar .icon {
+    margin-right: 5px;
+}
+
+.sidebar .nav-sidebar li a {
+    text-decoration: none;
+    color: #b3b3b2;
+}
+
+.sidebar .underlined {
+    border: solid 1px #999797;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.navigation {
+    padding: 15px 0 15px 0;
+    font-size: 18px;
+    background: #000d16;
+    position: sticky;
+    top: 0;
+    /* overflow: hidden;
+    transition: 0.4s;
+    position: Sticky;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    */
+}
+
+.navigation .head {
+    color: #fff;
+    margin-left: 40%;
+    font-size: 30px;
+    display: inline-block;
+}
+
+.navigation .sub-nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation .sub-nav .login {
+    background-color: #fff;
+    color: #000;
+    border-radius: 20px;
+    padding: 8px 20px;
+    margin: 0 10px;
+}
+
+.content {
+    background-image: linear-gradient(-45deg, #000, #202020);
+    height: 100%;
+    height: 100vh;
+}
+
+.content .main-content {
+    padding-top: 20px;
+    margin-left: 40px;
+}
+
+.playing {
+    padding: 0;
+    /* margin-left: 10px; */
+    margin-right: 16px;
+    border-radius: 5px;
+    background-color: #131313;
+}
+
+.playing:hover {
+    background-color: #9696963b;
+}
+
+
+/* footer */
+
+.footer {
+    position: sticky;
+    bottom: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+    outline: none;
+}
+
+input {
+    line-height: normal;
+}
+
+label,
+button {
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.music {
+    /* bottom: 0;
+    position: sticky; */
+    display: flex;
+    width: 100%;
+    height: 110px;
+    margin: 0 auto;
+    background-color: #181818;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px 20px;
+}
+
+.music-thumb {
+    width: 70px;
+    height: 60px;
+    padding-right: 10px;
+    margin-left: 10px;
+}
+
+.music-thumb.is-playing {
+    animation: spinner 5s infinite linear;
+}
+
+.music-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 0 3px #ffb86c, 0 0 0 6px white;
+}
+
+.music-name {
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.controlbar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #999;
+    margin-left: 20PX;
+}
+
+.controlbarflashPlayer {
+    display: flex;
+    margin-top: 20px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 40px;
+    margin: 0 0 0 50px;
+}
+
+.play {
+    position: relative;
+}
+
+.play:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: scale(1.5);
+    border-radius: 100rem;
+}
+
+.player-inner {
+    width: 50px;
+    height: 50px;
+    border-radius: 100rem;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    font-size: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.player-inner .play-icon::before {
+    font-size: 30px;
+}
+
+.play-infinite,
+.play-repeat,
+.play-back,
+.play-forward {
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.range {
+    -webkit-appearance: none;
+    /* Hides the slider so that custom slider can be made */
+    left: 30%;
+    top: 13%;
+    width: 500px;
+    /* Specific width is required for Firefox. */
+    background: transparent;
+    /* Otherwise white in Chrome */
+    margin-bottom: 20px;
+}
+
+.range::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    background-color: #eeee;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #20e3b2;
+    width: 15px;
+    height: 15px;
+    border-radius: 100rem;
+    margin-top: -8px;
+    box-shadow: 0 0 0 3px white, 0 0 0 6px rgba(100, 100, 111, 0.05);
+}
+
+.duration,
+.remaining {
+    padding: 4px 20px;
+}
+
+.play-repeat {
+    font-size: 20px;
+}
+
+.marquee {
+    height: 25px;
+    width: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee div {
+    display: block;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    overflow: hidden;
+    animation: marquee 5s linear infinite;
+}
+
+.marquee span {
+    float: left;
+    width: 50%;
+}
+
+@keyframes marquee {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+.my-favorite,
+.volume {
+    color: aliceblue;
+}
+
+.search {
+    display: flex;
+}
+
+.search_bar {
+    width: 400px;
+    height: 40px;
+    border-radius: 20px;
+    padding-left: 15%;
+    padding-right: 10%;
+    position: relative;
+}
+
+.lens {
+    position: absolute;
+    /* top: 25%; */
+    color: #000;
+    /* left: 132%; */
+    font-size: 22px;
+    z-index: 1;
+    padding: 10px 0 0 20px;
+}
