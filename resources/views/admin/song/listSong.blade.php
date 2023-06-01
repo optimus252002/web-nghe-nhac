@@ -131,12 +131,12 @@
                 </div>
                 <div class="table-responsive  mt-1">
                     <table class="table select-table">
-                        <div class="d-sm-flex">
+                        <div style="margin-bottom: 20px;" class="d-sm-flex">
                             <form action="{{ route('admin.listsong.filterdata') }}" method="post">
                                 @csrf
-                                <input type="search" placeholder="tìm kiếm" title="Search here" name="searchs">
+                                <input style="margin-right: 28px; padding: 8px; border-radius: 4px; border:solid 1px;" type="search" placeholder="tìm kiếm" title="Search here" name="searchs">
                             </form>
-                            <select id="ddlViewBy" onchange="run()">
+                            <select style="padding: 8px; font-size: 14px; border-radius: 8px;" id="ddlViewBy" onchange="run()">
                                 <option value="0" selected="selected">Tùy chọn bộ lọc </option>
                                 <option value="1">lọc theo thời gian</option>
                                 <option value="3">lọc theo thể loại</option>
