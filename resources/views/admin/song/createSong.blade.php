@@ -1,16 +1,18 @@
 @extends('admin.layout')
 @section('main-content')
+
     <div class="col-md-12 grid-margin stretch-card">
+    <style> select {   padding: 16px 20px;  border: none;  border-radius: 4px;  background-color: #f1f1f1;}</style>
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title"> Form Create</h4>
                 <form class="forms-sample" action="{{ route('admin.session.song') }}" method="POST" enctype="multipart/form-data">
                     @csrf
-                    <div class="form-group">
-                        <label for="exampleInputUsername1">Name singer</label>
-                        <select name="nameSinger" id="nameSinger">
+                    <div  class="form-group">
+                        <label style="margin-top: 6px;" for="exampleInputUsername1">Name singer</label>
+                        <select style="border: solid 1px #ccc; margin-left: 12px; border-radius: 8px; padding: 6px;" name="nameSinger" id="nameSinger">
                             @foreach ($singers as $singer)
-                            <option value="{{$singer->name_singer}}">{{$singer->name_singer}}</option>
+                            <option  value="{{$singer->name_singer}}">{{$singer->name_singer}}</option>
                              @endforeach
                         </select>
                             
@@ -26,8 +28,8 @@
                     @enderror
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputUsername1">Category</label>
-                        <select name="nameCategory" id="nameCategory">
+                        <label style="margin-top: 6px;" for="exampleInputUsername1">Category</label>
+                        <select  style="border: solid 1px #ccc; margin-left: 12px; border-radius: 8px; padding: 6px;" name="nameCategory" id="nameCategory">
                             @foreach ($categorys as $category)
                             <option value="{{$category->name_category}}">{{$category->name_category}}</option>
                              @endforeach
@@ -35,14 +37,14 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">File</label>
-                        <input type="file" class="form-control" id="exampleInputPassword1" name="path" >
+                        <input style=" line-height: 6px;" type="file" class="form-control" id="exampleInputPassword1" name="path" >
                         @error('path')
                         <span style="color: red">{{ $message }}</span>
                     @enderror
                     </div>
                     <div class="form-group">
                         <label for="exampleInputConfirmPassword1">Image</label>
-                        <input type="file" class="form-control" id="exampleInputConfirmPassword1"
+                        <input style=" line-height: 6px;" type="file" class="form-control" id="exampleInputConfirmPassword1"
                             name="image">
                             @error('image')
                             <span style="color: red">{{ $message }}</span>
